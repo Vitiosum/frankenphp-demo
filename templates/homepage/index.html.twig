@@ -5,7 +5,6 @@
 {% block body %}
 
 <style>
-
 .container{
   max-width:1100px;
   margin:auto;
@@ -19,6 +18,7 @@
   padding:40px;
   border-radius:12px;
   margin-bottom:20px;
+  border:1px solid rgba(255,255,255,0.08);
 }
 
 .hero h1{
@@ -30,6 +30,7 @@
 .hero p{
   color:#cbd5e1;
   font-size:18px;
+  line-height:1.6;
 }
 
 .banner{
@@ -45,12 +46,36 @@
 .logos{
   display:flex;
   align-items:center;
-  gap:20px;
+  gap:14px;
   margin-top:20px;
+  flex-wrap:wrap;
 }
 
-.logos img{
-  height:45px;
+.logo-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 18px;
+  border-radius:999px;
+  font-weight:bold;
+  letter-spacing:0.2px;
+  min-height:48px;
+}
+
+.logo-clever{
+  background:#22c55e;
+  color:#0f172a;
+}
+
+.logo-franken{
+  background:#38bdf8;
+  color:#0f172a;
+}
+
+.logo-plus{
+  color:#cbd5e1;
+  font-size:24px;
+  font-weight:bold;
 }
 
 .buttons{
@@ -87,10 +112,16 @@
   color:white;
   padding:20px;
   border-radius:10px;
+  border:1px solid rgba(255,255,255,0.08);
 }
 
 .card h2{
   margin-top:0;
+}
+
+.card p{
+  color:#cbd5e1;
+  line-height:1.6;
 }
 
 .footer{
@@ -98,89 +129,87 @@
   color:#94a3b8;
 }
 
+.footer a{
+  color:#38bdf8;
+}
+
 @media (max-width:900px){
   .grid{
     grid-template-columns:1fr;
   }
+
+  .hero h1{
+    font-size:32px;
+  }
 }
-
 </style>
-
 
 <div class="container">
 
-<div class="hero">
+  <div class="hero">
 
-<div class="banner">
-🎥 YouTube Demo — Running on Clever Cloud
-</div>
+    <div class="banner">
+      🎥 YouTube Demo — Running on Clever Cloud
+    </div>
 
-<h1>FrankenPHP on Clever Cloud</h1>
+    <h1>FrankenPHP on Clever Cloud</h1>
 
-<p>
-This demo shows a modern PHP application using
-<strong>FrankenPHP</strong>, <strong>Symfony</strong> and
-<strong>API Platform</strong>, deployed on <strong>Clever Cloud</strong>.
-</p>
+    <p>
+      This demo shows a modern PHP application using
+      <strong>FrankenPHP</strong>, <strong>Symfony</strong> and
+      <strong>API Platform</strong>, deployed on <strong>Clever Cloud</strong>.
+    </p>
 
-<div class="logos">
+    <div class="logos">
+      <div class="logo-pill logo-clever">☁️ Clever Cloud</div>
+      <div class="logo-plus">+</div>
+      <div class="logo-pill logo-franken">⚡ FrankenPHP</div>
+    </div>
 
-<img src="https://www.clever.cloud/app/themes/Starter/assets/img/press/logos/clever-cloud-logo-white.svg">
+    <div class="buttons">
+      <a class="btn-primary" href="/api" target="_blank" rel="noopener noreferrer">
+        Open Swagger UI
+      </a>
 
-<span style="font-size:26px;">+</span>
+      <a class="btn-secondary" href="/api/monsters.jsonld" target="_blank" rel="noopener noreferrer">
+        Open Monsters API
+      </a>
+    </div>
 
-<img src="https://frankenphp.dev/img/frankenphp.png">
+  </div>
 
-</div>
+  <div class="grid">
 
-<div class="buttons">
+    <div class="card">
+      <h2>Runtime</h2>
+      <p>
+        FrankenPHP provides a modern PHP runtime optimized for
+        performance and developer experience.
+      </p>
+    </div>
 
-<a class="btn-primary" href="/api" target="_blank">
-Open Swagger UI
-</a>
+    <div class="card">
+      <h2>Framework</h2>
+      <p>
+        Symfony structures the application while API Platform
+        automatically exposes documented API endpoints.
+      </p>
+    </div>
 
-<a class="btn-secondary" href="/api/monsters.jsonld" target="_blank">
-Open Monsters API
-</a>
+    <div class="card">
+      <h2>Platform</h2>
+      <p>
+        Clever Cloud manages deployment, hosting and execution
+        so developers can focus on their applications.
+      </p>
+    </div>
 
-</div>
+  </div>
 
-</div>
-
-
-<div class="grid">
-
-<div class="card">
-<h2>Runtime</h2>
-<p>
-FrankenPHP provides a modern PHP runtime optimized for
-performance and developer experience.
-</p>
-</div>
-
-<div class="card">
-<h2>Framework</h2>
-<p>
-Symfony structures the application while API Platform
-automatically exposes documented API endpoints.
-</p>
-</div>
-
-<div class="card">
-<h2>Platform</h2>
-<p>
-Clever Cloud manages deployment, hosting and execution
-so developers can focus on their applications.
-</p>
-</div>
-
-</div>
-
-
-<div class="footer">
-Powered by FrankenPHP, Symfony and API Platform — deployed on
-<a href="https://www.clever.cloud" target="_blank">Clever Cloud</a>.
-</div>
+  <div class="footer">
+    Powered by FrankenPHP, Symfony and API Platform — deployed on
+    <a href="https://www.clever.cloud" target="_blank" rel="noopener noreferrer">Clever Cloud</a>.
+  </div>
 
 </div>
 
