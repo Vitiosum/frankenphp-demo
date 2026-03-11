@@ -1,17 +1,86 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
+{% block title %}FrankenPHP Demo on Clever Cloud{% endblock %}
 
 {% block body %}
-Hello {{ controller_name }}!<br/>
-<ul>
-    <li><a href="/api">API Platform's Swagger UI</a></li>
-    <li><a href="/api/monsters.jsonld">API Platform: collection of monsters (GET/JSON-LD)</a></li>
-</ul>
+  <div class="container">
+    <section class="hero">
+      <span class="eyebrow">FrankenPHP + Symfony + API Platform</span>
+      <h1>
+        Run <span class="accent">FrankenPHP</span><br>
+        on <span class="accent">Clever Cloud</span>
+      </h1>
+      <p class="lead">
+        This demo shows a modern PHP stack running on Clever Cloud with Symfony, API Platform and FrankenPHP,
+        exposed through a clean application entrypoint and ready-to-demo API endpoints.
+      </p>
 
-<hr>
+      <div class="actions">
+        <a class="button button-primary" href="/api" target="_blank" rel="noopener noreferrer">Open Swagger UI</a>
+        <a class="button button-secondary" href="/api/monsters.jsonld" target="_blank" rel="noopener noreferrer">Open Monsters JSON-LD</a>
+      </div>
+    </section>
 
-<a href="https://github.com/dunglas/frankenphp">
-    <img width="400" src="{{ url('download_logo') }}" alt="FrankenPHP's logo" title="Download logo using X-Accel-Redirect"/>
-</a>
+    <section class="grid">
+      <article class="card col-4">
+        <h2>What this demo shows</h2>
+        <p>
+          A standard Symfony application powered by FrankenPHP and API Platform, deployed as a web app and ready to expose APIs cleanly.
+        </p>
+      </article>
+
+      <article class="card col-4">
+        <h2>Demo value</h2>
+        <span class="metric">Fast setup</span>
+        <span class="metric-sub">A lightweight application with a production-friendly PHP stack and a polished landing page.</span>
+      </article>
+
+      <article class="card col-4">
+        <h2>Clever Cloud angle</h2>
+        <p>
+          Ideal to illustrate a simple deployment story: push code, expose an API, and present a modern PHP runtime without a heavy demo setup.
+        </p>
+      </article>
+
+      <article class="card col-8">
+        <h2>Why it works well in demo</h2>
+        <ul class="list">
+          <li>Clean application homepage instead of the default Symfony starter page</li>
+          <li>Immediate access to API Platform Swagger UI</li>
+          <li>Immediate access to a JSON-LD resource collection</li>
+          <li>Clear narrative around modern PHP workloads on Clever Cloud</li>
+        </ul>
+      </article>
+
+      <article class="card col-4">
+        <div class="logo-wrap">
+          <img src="https://frankenphp.dev/img/frankenphp.png" alt="FrankenPHP logo">
+        </div>
+      </article>
+
+      <article class="card col-6">
+        <h2>Endpoints to show live</h2>
+        <ul class="list">
+          <li><a href="/" target="_blank" rel="noopener noreferrer">Homepage</a></li>
+          <li><a href="/api" target="_blank" rel="noopener noreferrer">Swagger UI</a></li>
+          <li><a href="/api/monsters.jsonld" target="_blank" rel="noopener noreferrer">Monsters collection</a></li>
+        </ul>
+      </article>
+
+      <article class="card col-6">
+        <h2>Suggested pitch</h2>
+        <p>
+          “Here we’re showing a modern PHP application running on Clever Cloud with FrankenPHP, Symfony and API Platform.
+          The app exposes both a polished frontend entrypoint and API endpoints ready to consume.”
+        </p>
+      </article>
+    </section>
+
+    <section class="footer-card">
+      <p>
+        Built for demo purposes with <code>FrankenPHP</code>, <code>Symfony</code> and <code>API Platform</code>,
+        presented on <a href="https://www.clever.cloud" target="_blank" rel="noopener noreferrer">Clever Cloud</a>.
+      </p>
+    </section>
+  </div>
 {% endblock %}
