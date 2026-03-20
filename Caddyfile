@@ -4,7 +4,7 @@
 	}
 }
 
-localhost {
+:{$PORT:8080} {
 	log
 
 	encode zstd br gzip
